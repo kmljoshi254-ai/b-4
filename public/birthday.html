@@ -1001,7 +1001,10 @@
       document.getElementById('musicPlayer').classList.add('is-visible');
     }, null, '<');
 
- 
+ setInterval(() => {
+  const p = computeParts();
+  document.getElementById('liveReadout').textContent = readout(p);
+}, 1000);
   // ---------------- spotify-style mini player controls ----------------
   const bgMusic = document.getElementById('bgMusic');
   const musicPlayer = document.getElementById('musicPlayer');
